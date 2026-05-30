@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "journey-map-generator"
+version = "0.1.0"
+description = "Scaffolds journey maps with phases, pain points, and emotions from coded research data"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Kostas Kazakos", email = "kgkazakos@gmail.com" }]
+keywords = ["ux-research", "journey-map", "cpr", "computational-product-research", "user-research"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+]
+
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "litellm>=1.40",
+    "dspy-ai>=2.4",
+]
+
+[project.optional-dependencies]
+llm = [
+    "litellm>=1.40",
+    "openai>=1.0",
+    "anthropic>=0.25",
+    "google-genai>=1.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+journey-map-generator = "journey_map_generator.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/kgkazakos/journey-map-generator"
+Repository = "https://github.com/kgkazakos/journey-map-generator"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
