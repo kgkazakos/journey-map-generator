@@ -164,7 +164,7 @@ with st.sidebar:
         "Backend",
         options=["claude", "gemini", "openai", "none (rule-based only)"],
         index=0,
-        help="claude = Claude Opus 4, gemini = Gemini 3.1 Pro, openai = GPT-5.5",
+        help="claude = Claude Opus 4, gemini = Gemini 4 Argon, openai = GPT-5.5",
     )
 
     api_key_hint = {
