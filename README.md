@@ -2,7 +2,7 @@
 
 **CPR Orbital Tool #38 — S6: Pre-study & impact**
 
-Scaffold user journey maps with phases, pain points, and emotional arcs from coded qualitative research data. Rule-based core, LLM enrichment via Claude Opus 4, Gemini 3.1 Pro, or GPT-5.5.
+Scaffold user journey maps with phases, pain points, and emotional arcs from coded qualitative research data. Rule-based core, LLM enrichment via Claude Opus 4, Gemini 4 Argon, or GPT-5.5.
 
 ---
 
@@ -27,7 +27,7 @@ After user research, you have notes, transcripts, and affinity maps — but turn
 - **Pain point extraction** — automatic severity classification (critical / moderate / minor)
 - **Opportunity generation** — surfaces HMW statements per phase via LLM
 - **Moments of truth** — LLM-identified make-or-break interactions
-- **Multi-backend LLM** — Claude Opus 4, Gemini 3.1 Pro Preview, GPT-5.5 (via LiteLLM)
+- **Multi-backend LLM** — Claude Opus 4, Gemini 4 Argon, GPT-5.5 (via LiteLLM)
 - **Export** — JSON (CI-friendly), Markdown, CSV for downstream use
 - **Streamlit UI** — interactive map with emotion arc charts and per-phase drill-down
 - **Batch mode** — generate maps for multiple personas from one dataset
@@ -145,7 +145,7 @@ Unstructured text is also supported — the engine will attempt phase classifica
 | Backend | Model | Environment variable |
 |---------|-------|---------------------|
 | `claude` (default) | `anthropic/claude-opus-4-5` | `ANTHROPIC_API_KEY` |
-| `gemini` | `gemini/gemini-3.1-pro-preview` | `GEMINI_API_KEY` |
+| `gemini` | `gemini/gemini-4-argon` | `GEMINI_API_KEY` |
 | `openai` | `openai/gpt-5.5` | `OPENAI_API_KEY` |
 | `none` | Rule-based only | — |
 

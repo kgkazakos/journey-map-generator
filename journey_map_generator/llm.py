@@ -1,6 +1,6 @@
 """
 LLM enrichment for journey-map-generator.
-Supports Claude Opus 4, Gemini 3.1 Pro Preview, GPT-5.5.
+Supports Claude Opus 4, Gemini 4 Argon, GPT-5.5.
 LLM is ON by default; pass backend=None to run rule-based only.
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ from .models import (
 
 SUPPORTED_BACKENDS = {
     "claude": "anthropic/claude-opus-4-5",
-    "gemini": "gemini/gemini-3.1-pro-preview",
+    "gemini": "gemini/gemini-4-argon",
     "openai": "openai/gpt-5.5",
 }
 
